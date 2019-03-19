@@ -7,7 +7,7 @@ import (
 	"log"
 	"regexp"
 
-	dewey "github.com/kgwebsites/dewey/app/api/dewey/modules"
+	dewey "github.com/kgwebsites/dewey/api/dewey/modules"
 )
 
 var api string

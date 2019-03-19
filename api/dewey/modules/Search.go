@@ -33,7 +33,8 @@ var Search = func(dir string) Res {
 						files = append(files, File{Name: f.Name(), Path: path, RelPath: strings.TrimPrefix(path, dir)})
 					}
 				}
-				if !f.IsDir() {
+
+				if !f.IsDir() && f.Mode().IsRegular() {
 					file, err := os.Open(path)
 					if err != nil {
 						log.Fatal(err)
